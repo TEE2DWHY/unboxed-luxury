@@ -1,11 +1,20 @@
 body {
   margin: 0;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 .navbar{
   background-color: #E4DDD6;
   padding: 20px;
+}
+
+.nav-home{
+  font-weight: 600;
+}
+
+.nav-link:hover{
+    opacity: 0.6;
 }
 
 .navbar-nav{

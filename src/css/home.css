@@ -1,6 +1,31 @@
 
+
+.animate{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.animate1{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: 93%;
+}
+
+.unboxed{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: #efcca7;
+    text-decoration-style: wavy;
+}
+
 .hero-section{
-    margin-top: 5%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    background: url("../components/bg-img.png");
 }
 
 .hero-intro{
@@ -18,12 +43,43 @@
     opacity: 0.6;
 }
 
+button.shop-now{
+    display: block;
+    background-color: #EDE7E9;
+    padding: 15px 35px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    animation: fadeIn;
+    animation-duration: 3s; /* don't forget to set a duration! */
+}
+
+button.shop-now:hover{
+    background-color: #080705;
+    color: #fff;
+    animation: pulse;
+    animation-duration: 2s;
+}
+
+.statistics{
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-top: 15%;
+}
+
+.stats-p{
+    font-size: 14px;
+    display: block;
+}
+
 .zanotti{
     height: 70%;
     display: block;
     margin: auto;
-    /* width: 70%;
-    height: 70%; */
     object-fit: cover;
 }
 
@@ -33,7 +89,8 @@
 
 .brands-header{
     text-align: center;
-    margin: 3% 0 ;
+    margin: 1% 0 ;
+    color: #fff;
 }
 
 .brand-img{
@@ -42,19 +99,44 @@
  height: 70%;
 }
 
+.shoe-collection{
+    margin-top: 3%;
+}
+
+.dress-shoe-header{
+    color: #655849;
+    margin-bottom: 20px;
+}
+
 .collection-shoe{
     border: 7px solid #1B1B1B;
     border-radius: 18px;
     object-fit: cover;
+    display: block;
+    margin: auto;
 }
 
 .collection-container{
-    box-shadow: 10px 18px 5px -3px rgba(143, 140, 140, 0.95);
-    -webkit-box-shadow: 10px 18px 5px -3px rgba(143, 140, 140, 0.95);
-    -moz-box-shadow: 10px 18px 5px -3px rgba(143, 140, 140, 0.95);
-    padding: 20px;
+    border-radius: 13px 10px 10px 10px;
+    -webkit-border-radius: 13px 10px 10px 10px;
+    -moz-border-radius: 13px 10px 10px 10px;
+    padding: 10px;
     border-radius: 10px;
-    /* margin-right:  5px; */
+    /* border-color: #efcca7; */
+    border: 1px solid #efcca7;
+}
+
+.shoe-name{
+    color:  #211C16;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.shoe-price{
+    color: #A8927A;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .collection-details{
@@ -63,20 +145,121 @@
     padding: 0 40px 0 0;
 }
 
+.user-selection{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity{
+    font-size: 20px;
+}
+
+.add-to-bag{
+    background-color: #EDE7E9;
+    color: #49101F;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 20px;
+}
 .arrivals{
     background-color: #A8927A;
     margin-top: 5%;
 }
+
+.arrival-header{
+    padding-top: 3%;
+}
 .arrival-features{
     display: flex;
     justify-content: space-between;
+    font-weight: bold;
 }
-button.shop-now{
+
+.arrival-img{
+    height: 250px;
+    width: 250px;
     display: block;
-    background-color: #EDE7E9;
-    padding: 10px 30px;
-    border-radius: 7px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
+    margin: auto;
 }
+
+.arrivals-container{
+   margin-top: 3%;
+ 
+}
+
+.arrivals-details{
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.arrival-title{
+    color: #564739;
+    margin-top: 4%;
+    font-weight: bold;
+    width: 90%;
+}
+
+.arrival-details{
+    color: #555555;
+
+}
+
+.add-to-bag-arrival{
+        background-color: #EDE7E9;
+        color: #49101F;
+        border: none;
+        border-radius: 7px;
+        padding: 5px 10px;
+        margin-right: 10px;
+}
+
+.arrival-price{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px 0 0;
+    margin-bottom: 20px;
+}
+
+.footie-header{
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.dress-shoe{
+    color: #2B241C;
+}
+
+.alexander-png{
+    border-radius: 100%;
+    display: block;
+    margin: auto;
+}
+
+.berluti{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+.shopping{
+    object-fit: cover;
+    height: 80%;
+}
+
+.why-choose-us{
+    color: #5F4F3F;
+    margin: 5% 0;
+}
+
+.why-patronize-header{
+    font-size: 35px;
+    margin-bottom: 5%;
+}
+
+.why-patronize-p{
+    font-size: 18px;
+    letter-spacing: 0.1rem;
+}
+
