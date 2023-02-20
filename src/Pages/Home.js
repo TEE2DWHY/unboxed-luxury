@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import "../css/home.css"
 import { Typewriter } from 'react-simple-typewriter'
+import Footer from '../components/Footer'
 import { animated, useSpring } from '@react-spring/web'
 
 const Home = () => {
@@ -14,11 +15,17 @@ const Home = () => {
         });
         return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>
     }
+
+    const add = () =>{
+        const price = document.getElementById("price").innerHTML;
+        return Number(price) + 1;
+    }
+
   return (
    <>
         <Navbar/>
-          <img className='animate' src='./images/Baby shoes.gif' alt='shoe-gif'/>
-          <img className='animate1' src='./images/Baby shoes.gif' alt='shoe-gif'/>
+          {/* <img className='animate' src='./images/Baby shoes.gif' alt='shoe-gif'/>
+          <img className='animate1' src='./images/Baby shoes.gif' alt='shoe-gif'/> */}
         {/* Hero-Section */}
         <div className='container hero-section'>
             <div className='row'>
@@ -75,10 +82,7 @@ const Home = () => {
                 </div>
                 <div className='col-lg-3'>
                 <img className='img-fluid brand-img' src='./images/swift.png' alt='Swift'/>
-                </div>
-                 
-                
-                 
+                </div> 
                 </div>
                 </div>
         </div>
@@ -92,7 +96,7 @@ const Home = () => {
                         <p className='shoe-name'>Berlutti</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> 0 <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='price'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}} onClick={add}></i></span> <span><button className='add-to-bag'>
                             Add to Bag
                         </button></span> </div>
                      </div>
@@ -217,7 +221,14 @@ const Home = () => {
                     </p>
                 </div>
             </div>
+            <div className='features d-flex justify-content-between'>
+                    <div> <i class="fa-solid fa-money-bill feature-icon"></i> Affordable and Pocket Friendly </div>
+                    <div> <i class="fa-solid fa-truck feature-icon"></i> Fast Delivery</div>
+                    <div> <i class="fa-solid fa-phone feature-icon"></i> Fast Customer Support</div>
+            </div>
         </div>
+        {/* Footer */}
+        <Footer/>
    </>
   )
 }

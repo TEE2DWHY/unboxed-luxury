@@ -263,3 +263,27 @@ button.shop-now:hover{
     letter-spacing: 0.1rem;
 }
 
+.features{
+    font-size: 20px;
+}
+
+.feature-icon{
+    color:#49101F;
+    margin-right: 5px;
+}
+/* Footer */
+.footer{
+    margin-top: 7%;
+}
+.brand-details{
+    flex: 2;
+}
+.about{
+    flex: 2;
+}
+.product{
+    flex: 1;
+}
+.brand-details p{
+    padding-right: 50px;
+}
