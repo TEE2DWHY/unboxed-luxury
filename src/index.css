@@ -11,6 +11,10 @@ body {
 
 .nav-home{
   font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #49101F;
+  text-decoration-skip: edges;
 }
 
 .nav-link:hover{

@@ -4,9 +4,10 @@ import "../css/home.css"
 import { Typewriter } from 'react-simple-typewriter'
 import Footer from '../components/Footer'
 import { animated, useSpring } from '@react-spring/web'
+import increment, { decrement } from '../utils/quantity'
 
 const Home = () => {
-    function Number ({n}){
+    function Spring ({n}){
         const {number} = useSpring({
             from: {number: 0},
             number: n,
@@ -16,17 +17,12 @@ const Home = () => {
         return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>
     }
 
-    const add = () =>{
-        const price = document.getElementById("price").innerHTML;
-        return Number(price) + 1;
-    }
+  
+
 
   return (
    <>
         <Navbar/>
-          {/* <img className='animate' src='./images/Baby shoes.gif' alt='shoe-gif'/>
-          <img className='animate1' src='./images/Baby shoes.gif' alt='shoe-gif'/> */}
-        {/* Hero-Section */}
         <div className='container hero-section'>
             <div className='row'>
                 <div className='col-lg-6'>
@@ -48,13 +44,13 @@ const Home = () => {
                     <button className='shop-now'> <i style={{marginRight:"10px", Color:"#49101F"}} class="fa-solid fa-arrow-right"></i> Shop Now</button>
                     {/* Statistics */}
                          <span className='statistics'>
-                         <span> <Number n={100}/>
+                         <span> <Spring n={100}/>
                              <span className='stats-p'>Brands<sup>+</sup></span>
                          </span>
-                         <span> <Number n={546}/>
+                         <span> <Spring n={546}/>
                             <span className='stats-p'>Sold Shoes<sup>+</sup></span>
                          </span> 
-                         <span> <Number n={1000}/>
+                         <span> <Spring n={1000}/>
                              <span className='stats-p'>Shoes Stocked<sup>+</sup></span>
                          </span>
                          </span> 
@@ -96,7 +92,9 @@ const Home = () => {
                         <p className='shoe-name'>Berlutti</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='price'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}} onClick={add}></i></span> <span><button className='add-to-bag'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='berlutti'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}} onClick={()=>{
+                            increment("berlutti")
+                        }}></i></span> <span><button className='add-to-bag'>
                             Add to Bag
                         </button></span> </div>
                      </div>
@@ -105,11 +103,19 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/Alexander.png' alt='Alexander'/>
-                        <p className='shoe-name'>Berlutti</p>
+                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
+                        <p className='shoe-name'>Dolce & Gabbana</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> 0 <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}
+                        onClick={()=>{
+                            decrement("DandG")
+                        }}
+                        ></i> <span id='DandG'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}
+                         onClick={()=>{
+                            increment("DandG")
+                        }}>
+                        </i></span> <span><button className='add-to-bag'>
                             Add to Bag
                         </button></span> </div>
                      </div>
@@ -118,11 +124,11 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/Alexander.png' alt='Alexander'/>
-                        <p className='shoe-name'>Berlutti</p>
+                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
+                        <p className='shoe-name'>Dolce & Gabbana</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> 0 <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
                             Add to Bag
                         </button></span> </div>
                      </div>
@@ -131,11 +137,11 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/Alexander.png' alt='Alexander'/>
-                        <p className='shoe-name'>Berlutti</p>
+                        <img className='collection-shoe' src='./images/TomFord-shoe.png' alt='TomFord'/>
+                        <p className='shoe-name'>TomFord</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> 0 <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
                             Add to Bag
                         </button></span> </div>
                      </div>
@@ -148,7 +154,7 @@ const Home = () => {
         {/* Latest Arrivals */}
         <div className='arrivals'>
         <div className='container'>
-            <h1 className='arrival-header'>Latest Arrivals</h1>
+            <h1 className='arrival-header'>Latest Arrivals <i class="fa-solid fa-fire"></i></h1>
             <div className='row'>
                 <div className='arrivals-container col-lg-4'>
                     <div className='arrivals-details'>
@@ -164,26 +170,26 @@ const Home = () => {
                 </div>
                 <div className='arrivals-container col-lg-4'>
                     <div className='arrivals-details'>
-                        <img className='img-fluid arrival-img' src='./images/hero-img.png' alt=""/>
+                        <img className='img-fluid arrival-img' src='./images/Tornado.png' alt=""/>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> 0 <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag-arrival'>
                         <i class="fa-solid fa-bag-shopping"></i> Add to Bag
                         </button></span> </div>
-                        <h3 className='arrival-title'>Alexander Mcqueen</h3>
+                        <h3 className='arrival-title'>Nike</h3>
                         <p className='arrival-details'>2021 Black</p>
                         <p className='arrival-details'>Male</p>
-                        <div className='arrival-price'><span className='shoe-price'>₦50,000</span> <span>Size</span></div>
+                        <div className='arrival-price'><span className='shoe-price'>₦45,000</span> <span>Size</span></div>
                     </div>
                 </div>
                 <div className='arrivals-container col-lg-4'>
                     <div className='arrivals-details'>
-                        <img className='img-fluid arrival-img' src='./images/hero-img.png' alt=""/>
+                        <img className='img-fluid arrival-img' src='./images/Nike.png' alt=""/>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> 0 <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag-arrival'>
                         <i class="fa-solid fa-bag-shopping"></i> Add to Bag
                         </button></span> </div>
-                        <h3 className='arrival-title'>Alexander Mcqueen</h3>
-                        <p className='arrival-details'>2021 Black</p>
+                        <h3 className='arrival-title'>Nike</h3>
+                        <p className='arrival-details'>2021 Orange</p>
                         <p className='arrival-details'>Male</p>
-                        <div className='arrival-price'><span className='shoe-price'>₦50,000</span> <span>Size</span></div>
+                        <div className='arrival-price'><span className='shoe-price'>₦49,000</span> <span>Size</span></div>
                     </div>
                 </div>
             </div>
@@ -203,6 +209,189 @@ const Home = () => {
                     </div>
             </div>
             <br/> <br/>
+        </div>
+        </div>
+
+        {/* Sneakers Collections */}
+        <div className='container'>
+        <div className='container shoe-collection'>
+            <h3 className='dress-shoe-header'>Sneakers Collections </h3>
+            <div className='row'>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/Alexander-Mcqueen1.png' alt='Alexander'/>
+                        <p className='shoe-name'>Berlutti</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/Gucci.png' alt='gucci'/>
+                        <p className='shoe-name'>Gucci</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/Balenciaga.png' alt='balenciaga'/>
+                        <p className='shoe-name'>Balenciaga</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/G-zanotti.png' alt='G.zanotti'/>
+                        <p className='shoe-name'>G.Zanotti</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+         {/* Slides Collections */}
+         <div className='container'>
+        <div className='container shoe-collection'>
+            <h3 className='dress-shoe-header'>Slides Collections </h3>
+            <div className='row'>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/Alexander.png' alt='Alexander'/>
+                        <p className='shoe-name'>Berlutti</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
+                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
+                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/TomFord-shoe.png' alt='TomFord'/>
+                        <p className='shoe-name'>TomFord</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+         {/* Sandals Collections */}
+         <div className='container'>
+        <div className='container shoe-collection'>
+            <h3 className='dress-shoe-header'>Sandals Collections </h3>
+            <div className='row'>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/Alexander.png' alt='Alexander'/>
+                        <p className='shoe-name'>Berlutti</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
+                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
+                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+                <div className='collection-pc col-lg-3'>
+                    <div className= 'collection-container'>
+                        <img className='collection-shoe' src='./images/TomFord-shoe.png' alt='TomFord'/>
+                        <p className='shoe-name'>TomFord</p>
+                        <p>Can be Won On Native </p>
+                        <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                            Add to Bag
+                        </button></span> </div>
+                     </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
 
