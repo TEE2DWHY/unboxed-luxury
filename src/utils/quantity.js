@@ -5,12 +5,8 @@ function increment(id) {
         value++;
         element.innerHTML = value;
     }
-    else{
-        alert("maximum quantity cannot be more than 3")
-    }
   }
 
-  export default increment
 
   export function decrement (id){
     var element = document.getElementById(id);
@@ -19,8 +15,7 @@ function increment(id) {
         value = value - 1 ;
         element.innerHTML = value;
     }
-    else{
-        alert("quantity cannot be less than zero")
-    }
     
   }
+
+  export default increment

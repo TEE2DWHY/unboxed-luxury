@@ -1,87 +1,21 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import "../css/home.css"
-import { Typewriter } from 'react-simple-typewriter'
-import Footer from '../components/Footer'
-import { animated, useSpring } from '@react-spring/web'
-import increment, { decrement } from '../utils/quantity'
+// components
+import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
+// HomePage sections
+import Hero from './Hero'
+import Brands from './Brands'
+// styling
+import './css/home.css'
+// utils
+import increment, { decrement } from '../../utils/quantity'
 
 const Home = () => {
-    function Spring ({n}){
-        const {number} = useSpring({
-            from: {number: 0},
-            number: n,
-            delay: 150,
-            config: {mass:1, tension:20, friction: 20},
-        });
-        return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>
-    }
 
-  
-
-
-  return (
+return (
    <>
         <Navbar/>
-        <div className='container hero-section'>
-            <div className='row'>
-                <div className='col-lg-6'>
-                    <p className='hero-intro'>Feel Bigger and 
-                     <span style={{marginLeft:"5px", color:"#C27664", fontWeight:"bold"}}>
-                     <Typewriter
-                        words={['Better..', 'Unmatched..', 'Styled..']}
-                        loop={0}
-                        cursor
-                        cursorStyle='|'
-                        typeSpeed={50}
-                        deleteSpeed={50}
-                        delaySpeed={1000}
-                    />
-                     </span> 
-                    </p>
-                    <h1 className='hero-header'>Step into style with latest <span className='unboxed'>unboxed footwear</span> trends.</h1>
-                    <p className='hero-paragraph'>Discover the perfect pair for every occasion from unboxed luxury , we always want you to step out in comfort and style. </p>
-                    <button className='shop-now'> <i style={{marginRight:"10px", Color:"#49101F"}} class="fa-solid fa-arrow-right"></i> Shop Now</button>
-                    {/* Statistics */}
-                         <span className='statistics'>
-                         <span> <Spring n={100}/>
-                             <span className='stats-p'>Brands<sup>+</sup></span>
-                         </span>
-                         <span> <Spring n={546}/>
-                            <span className='stats-p'>Sold Shoes<sup>+</sup></span>
-                         </span> 
-                         <span> <Spring n={1000}/>
-                             <span className='stats-p'>Shoes Stocked<sup>+</sup></span>
-                         </span>
-                         </span> 
-                </div>
-
-                <div className='col-lg-6 hero-img'>
-                    <img className='img-fluid zanotti' src='./images/g.zanotti image.png' alt="zanotti"/>
-                    </div>
-            </div>
-        </div>
-        {/* Brands */}
-        <div className='brands'>
-        <br/>
-                <h1 className='brands-header'>Brands of Shoes in Stock</h1>
-                <div className='container'>
-                <div className='row'>
-                <div className='col-lg-3'>
-                <img className='img-fluid brand-img' src='./images/LV.png' alt='LV'/>
-                </div>
-                <div className='col-lg-3'>
-                <img className='img-fluid brand-img' src='./images/TomFord.png' alt='TomFord'/>
-                </div>
-                <div className='col-lg-3'>
-                <img className='img-fluid brand-img' src='./images/Puma.png' alt='Puma'/>
-                </div>
-                <div className='col-lg-3'>
-                <img className='img-fluid brand-img' src='./images/swift.png' alt='Swift'/>
-                </div> 
-                </div>
-                </div>
-        </div>
+        <Hero/>
+        <Brands/>
         {/* Collections */}
         <div className='container shoe-collection'>
             <h3 className='dress-shoe-header'>Dress Shoe Collections </h3>
@@ -92,11 +26,16 @@ const Home = () => {
                         <p className='shoe-name'>Berlutti</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='berlutti'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}} onClick={()=>{
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer", fontSize:"22px"}}
+                        onClick={()=>{
+                            decrement("berlutti");
+                        }}
+                        ></i> <span id='berlutti'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer", fontSize:"22px"}} onClick={()=>{
                             increment("berlutti")
                         }}></i></span> <span><button className='add-to-bag'>
                             Add to Bag
-                        </button></span> </div>
+                        </button></span> 
+                        </div>
                      </div>
                     <div>
                     </div>
@@ -128,7 +67,15 @@ const Home = () => {
                         <p className='shoe-name'>Dolce & Gabbana</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}
+                        onClick={()=>{
+                            decrement("DandG1")
+                        }}
+                        ></i> <span id='DandG1'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}
+                        onClick={()=>{
+                            increment("DandG1")
+                        }}
+                        ></i></span> <span><button className='add-to-bag'>
                             Add to Bag
                         </button></span> </div>
                      </div>
@@ -141,7 +88,15 @@ const Home = () => {
                         <p className='shoe-name'>TomFord</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}
+                        onClick={()=>{
+                            decrement("TomFord")
+                        }}
+                        ></i> <span id='TomFord'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}
+                        onClick={()=>{
+                            increment("TomFord")
+                        }}
+                        ></i></span> <span><button className='add-to-bag'>
                             Add to Bag
                         </button></span> </div>
                      </div>
@@ -159,7 +114,15 @@ const Home = () => {
                 <div className='arrivals-container col-lg-4'>
                     <div className='arrivals-details'>
                         <img className='img-fluid arrival-img' src='./images/hero-img.png' alt=""/>
-                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> 0 <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag-arrival'>
+                        <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}
+                        onClick={()=>{
+                            decrement("alexander-mcqueen")
+                        }}
+                        ></i> <span id='alexander-mcqueen'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}
+                        onClick={()=>{
+                            increment("alexander-mcqueen")
+                        }}
+                        ></i></span> <span><button className='add-to-bag-arrival'>
                         <i class="fa-solid fa-bag-shopping"></i> Add to Bag
                         </button></span> </div>
                         <h3 className='arrival-title'>Alexander Mcqueen</h3>
@@ -213,7 +176,7 @@ const Home = () => {
         </div>
 
         {/* Sneakers Collections */}
-        <div className='container'>
+        <div className='container sneakers-collection'>
         <div className='container shoe-collection'>
             <h3 className='dress-shoe-header'>Sneakers Collections </h3>
             <div className='row'>
@@ -276,11 +239,11 @@ const Home = () => {
          {/* Slides Collections */}
          <div className='container'>
         <div className='container shoe-collection'>
-            <h3 className='dress-shoe-header'>Slides Collections </h3>
+            <h3 className='dress-shoe-header'>Sneakers Collections </h3>
             <div className='row'>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/Alexander.png' alt='Alexander'/>
+                        <img className='collection-shoe' src='./images/Alexander-Mcqueen1.png' alt='Alexander'/>
                         <p className='shoe-name'>Berlutti</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
@@ -293,8 +256,8 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
-                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <img className='collection-shoe' src='./images/Gucci.png' alt='gucci'/>
+                        <p className='shoe-name'>Gucci</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
@@ -306,8 +269,8 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
-                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <img className='collection-shoe' src='./images/Balenciaga.png' alt='balenciaga'/>
+                        <p className='shoe-name'>Balenciaga</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
@@ -319,8 +282,8 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/TomFord-shoe.png' alt='TomFord'/>
-                        <p className='shoe-name'>TomFord</p>
+                        <img className='collection-shoe' src='./images/G-zanotti.png' alt='G.zanotti'/>
+                        <p className='shoe-name'>G.Zanotti</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
@@ -337,11 +300,11 @@ const Home = () => {
          {/* Sandals Collections */}
          <div className='container'>
         <div className='container shoe-collection'>
-            <h3 className='dress-shoe-header'>Sandals Collections </h3>
+            <h3 className='dress-shoe-header'>Sneakers Collections </h3>
             <div className='row'>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/Alexander.png' alt='Alexander'/>
+                        <img className='collection-shoe' src='./images/Alexander-Mcqueen1.png' alt='Alexander'/>
                         <p className='shoe-name'>Berlutti</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
@@ -354,8 +317,8 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
-                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <img className='collection-shoe' src='./images/Gucci.png' alt='gucci'/>
+                        <p className='shoe-name'>Gucci</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
@@ -367,8 +330,8 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/D&G.png' alt='D&G'/>
-                        <p className='shoe-name'>Dolce & Gabbana</p>
+                        <img className='collection-shoe' src='./images/Balenciaga.png' alt='balenciaga'/>
+                        <p className='shoe-name'>Balenciaga</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
@@ -380,8 +343,8 @@ const Home = () => {
                 </div>
                 <div className='collection-pc col-lg-3'>
                     <div className= 'collection-container'>
-                        <img className='collection-shoe' src='./images/TomFord-shoe.png' alt='TomFord'/>
-                        <p className='shoe-name'>TomFord</p>
+                        <img className='collection-shoe' src='./images/G-zanotti.png' alt='G.zanotti'/>
+                        <p className='shoe-name'>G.Zanotti</p>
                         <p>Can be Won On Native </p>
                         <div className='collection-details'><span className='shoe-price'>₦20,000</span> <span>Size</span></div>
                         <div className='user-selection'><span className='quantity'><i class="fa-solid fa-circle-minus" style={{marginRight:"5px", cursor:"pointer"}}></i> <span id='quantity'>0</span> <i class="fa-solid fa-circle-plus" style={{margin:"5px", cursor:"pointer"}}></i></span> <span><button className='add-to-bag'>
@@ -393,6 +356,23 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        </div>
+
+        {/* Discount */}
+        <div className='discount'>
+            <div className='container'>
+                <div className='row discount-container'>
+                    <div className='col-lg-6'>
+                        <h3>Discount Discount Discount!!!</h3>
+                        <h4>25%</h4>
+                        <h3 className='discount-paragraph'>Unboxed Luxury would be offering its first 100 online customers a 25% discount</h3>
+                    </div>
+                    <div className='col-lg-6 discount-2'>
+                            <img className='discount-img' src='./images/Discount-img.png' alt='discount'/>
+                            <button className='discount-btn'> <i class="fa-solid fa-arrow-right"></i> Take Advantage</button>
+                     </div>
+                </div>
+            </div>
         </div>
 
         {/* Why Choose Us */}
