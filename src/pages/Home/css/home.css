@@ -90,8 +90,9 @@ button.shop-now:hover{
 
 .brands-header{
     text-align: center;
-    margin: 1% 0 ;
+    margin: 2% 0 ;
     color: #fff;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .brand-img{
@@ -127,7 +128,7 @@ button.shop-now:hover{
     /* border-color: #efcca7; */
     border: 1px solid #efcca7;
 }
-#berlutti, #DandG, #DandG1, #TomFord{
+#berlutti, #DandG, #DandG1, #TomFord, #nike1, #nike, #alexander-mcqueen{
     background-color:#564739;
     color: #fff;
     border-radius: 50%;
