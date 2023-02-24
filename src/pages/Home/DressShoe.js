@@ -14,7 +14,7 @@ const DressShoe = () => {
         const quantityElement = document.querySelector(".shoe-quantity");
         const shoeQuantity = quantityElement.innerHTML
         const phoneNumber = "+2349032533461";
-        const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(`Name: ${shoeName}\nEmail: ${shoeDetails}\nMessage: ${shoeQuantity}\nPrice; ${shoePrice}`)}`;
+        const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(`ORDER FROM UNBOXED LUXURY\nORDER DETAILS\nName: ${shoeName}\nDetails: ${shoeDetails}\nQuantity: ${shoeQuantity}\nPrice; ${shoePrice}`)}`;
         window.open(url);
     }
 
