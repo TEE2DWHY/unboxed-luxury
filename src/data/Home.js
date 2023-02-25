@@ -39,6 +39,7 @@ export const dressShoeCollection = [
     {
         id: 1,
         img: `${Alexander}`,
+        titleId: "berlutti",
         title: "Berlutti",
         details: "Can be Won On Native",
         price: "₦20,000",
@@ -50,6 +51,7 @@ export const dressShoeCollection = [
     {
         id: 2,
         img: `${DandG}`,
+        titleId: "dolce & gabbana",
         title: "Dolce & Gabbana",
         details: "Can be Won On Native",
         price: "₦20,000",
@@ -61,9 +63,10 @@ export const dressShoeCollection = [
     {
         id: 3,
         img: `${DandG1}`,
+        titleId: "dolce & gabbana1",
         title: "Dolce & Gabbana",
         details: "Can be Won On Native",
-        price: "₦20,000",
+        price: "₦50,000",
         minus: "fa-solid fa-circle-minus",
         ids: "DandG1",
         addition: "fa-solid fa-circle-plus",
@@ -72,6 +75,7 @@ export const dressShoeCollection = [
     {
         id: 4,
         img: `${Tom}`,
+        titleId: "Tf",
         title: "TomFord",
         details: "Can be Won On Native",
         price: "₦20,000",

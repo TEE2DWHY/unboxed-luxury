@@ -1,5 +1,4 @@
 
-
 .animate{
     width: 80px;
     height: 80px;
@@ -15,12 +14,12 @@
     margin-left: 93%;
 }
 
-.unboxed{
+/* .unboxed{
     text-decoration: underline;
     text-decoration-style: dotted;
     text-decoration-color: #efcca7;
     text-decoration-style: wavy;
-}
+} */
 
 .hero-section{
     margin-top: 6%;
@@ -52,6 +51,7 @@ button.shop-now{
     /* border: none; */
     cursor: pointer;
     margin-top: 20px;
+    margin-bottom: 20px;
     animation: fadeIn;
     animation-duration: 3s; /* don't forget to set a duration! */
 }

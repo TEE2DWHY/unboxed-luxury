@@ -1,0 +1,19 @@
+@media(max-width: 1200px){
+    .hero-section{
+        text-align: center;
+    }
+
+  button.shop-now{
+    margin: auto;
+  }
+
+  .statistics span{
+    display: none;
+  }
+  .alexander-png{
+    margin-top: 5%;
+  }
+  .why-us{
+    text-align: center;
+  }
+}
