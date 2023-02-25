@@ -8,18 +8,16 @@ import DressShoe from './DressShoe'
 // styling
 import './css/mobile.css'
 import './css/home.css'
-
 // utils
-// import increment, { decrement } from '../../utils/quantity'
 import ChooseUs from './ChooseUs'
 import LatestArrivals from './LatestArrivals'
 import Discount from './Discount'
 import { useEffect } from 'react'
-import Slider from '../../libs/Slider'
+// libs
+import Slider, { animate } from '../../libs/Slider'
 
 
 const Home = () => {
-
     useEffect(()=>{
         Slider()
     })
@@ -27,10 +25,10 @@ const Home = () => {
 return (
    <>
         <Navbar/>
-        <div data-aos="slide-up"><Hero/></div>
-        <div data-aos="slide-up"><Brands/></div>
-        <div data-aos="slide-up"><DressShoe/></div>
-        <div data-aos="slide-up"><LatestArrivals/></div>
+        <div data-aos={animate}><Hero/></div>
+        <div data-aos={animate}><Brands/></div>
+        <div data-aos={animate}><DressShoe/></div>
+        <div data-aos={animate}><LatestArrivals/></div>
         {/* Sneakers Collections */}
         <div className='container sneakers-collection'>
         <div className='container shoe-collection'>

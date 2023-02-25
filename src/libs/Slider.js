@@ -8,4 +8,6 @@ const Slider = () =>{
 })
 }
 
+export const animate = "slide-up"
+
 export default Slider
