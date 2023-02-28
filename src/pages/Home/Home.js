@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 // components
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
@@ -5,14 +6,12 @@ import Navbar from '../../components/Navbar'
 import Hero from './Hero'
 import Brands from './Brands'
 import DressShoe from './DressShoe'
-// styling
-import './css/mobile.css'
-import './css/home.css'
-// utils
 import ChooseUs from './ChooseUs'
 import LatestArrivals from './LatestArrivals'
 import Discount from './Discount'
-import { useEffect } from 'react'
+// styling
+import './css/mobile.css'
+import './css/home.css'
 // libs
 import Slider, { animate } from '../../libs/Slider'
 

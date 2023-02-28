@@ -3,10 +3,6 @@ import Lv from "../assets/images/LV.png";
 import TomFord from "../assets/images/tomford.png"
 import Puma from "../assets/images/Puma.png"
 import Swift from "../assets/images/swift.png"
-import Alexander from "../assets/images/Alexander.png"
-import DandG from "../assets/images/D&G.png"
-import DandG1 from "../assets/images/D&G.png"
-import Tom from "../assets/images/TomFord-shoe.png"
 import Hero from "../assets//images/hero-img.png"
 import Tornado from "../assets/images/Tornado.png"
 import Nike from "../assets/images/Nike.png"
@@ -35,57 +31,7 @@ const brand = [
     
 ]
 
-export const dressShoeCollection = [
-    {
-        id: 1,
-        img: `${Alexander}`,
-        titleId: "berlutti",
-        title: "Berlutti",
-        details: "Can be Won On Native",
-        price: "₦20,000",
-        minus: "fa-solid fa-circle-minus",
-        ids: "berlutti",
-        addition: "fa-solid fa-circle-plus",
-        buttonText: "Add to Bag"
-    },
-    {
-        id: 2,
-        img: `${DandG}`,
-        titleId: "dolce & gabbana",
-        title: "Dolce & Gabbana",
-        details: "Can be Won On Native",
-        price: "₦20,000",
-        minus: "fa-solid fa-circle-minus",
-        ids: "DandG",
-        addition: "fa-solid fa-circle-plus",
-        buttonText: "Add to Bag"
-    },
-    {
-        id: 3,
-        img: `${DandG1}`,
-        titleId: "dolce & gabbana1",
-        title: "Dolce & Gabbana",
-        details: "Can be Won On Native",
-        price: "₦50,000",
-        minus: "fa-solid fa-circle-minus",
-        ids: "DandG1",
-        addition: "fa-solid fa-circle-plus",
-        buttonText: "Add to Bag"
-    },
-    {
-        id: 4,
-        img: `${Tom}`,
-        titleId: "Tf",
-        title: "TomFord",
-        details: "Can be Won On Native",
-        price: "₦20,000",
-        minus: "fa-solid fa-circle-minus",
-        ids: "TomFord",
-        addition: "fa-solid fa-circle-plus",
-        buttonText: "Add to Bag"
-    }
 
-]
 
 export const latestArrivals = [
     {
