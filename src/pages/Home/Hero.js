@@ -1,6 +1,8 @@
 import React from 'react'
 import TypeWriter from '../../libs/TypeWriter'
 import Spring from '../../libs/Spring'
+// images
+import Shopping from "../../assets/images/Ecommerce checkout.gif"
 
 
 const Hero = () => {
@@ -16,7 +18,7 @@ const Hero = () => {
                         </span> 
                     </p>
                     <h1 className='hero-header'>Step into style with latest <span className='unboxed'>unboxed footwear</span> trends.</h1>
-                    <p className='hero-paragraph'>Discover the perfect pair for every occasion from unboxed luxury , we always want you to step out in comfort and style. </p>
+                    <p className='hero-paragraph'>Discover the perfect pair <i class="fa-solid fa-shoe-prints"></i> for every occasion from unboxed luxury , we always want you to step out in comfort and style. </p>
                     <button className='shop-now'> <i style={{marginRight:"10px", Color:"#49101F"}} class="fa-solid fa-arrow-right"></i> Shop Now</button>
                     {/* Statistics */}
                          <span className='statistics'>
@@ -33,7 +35,7 @@ const Hero = () => {
                 </div>
 
                 <div className='col-lg-6 hero-img'>
-                    <img className='img-fluid zanotti' src='./images/g.zanotti image.png' alt="zanotti"/>
+                    <img className='img-fluid zanotti' src={Shopping} alt="zanotti"/>
                 </div>
             </div>
         </div>

@@ -1,7 +1,23 @@
 @media(max-width: 1200px){
-    .hero-section{
+  .hero-section{
         text-align: center;
     }
+
+    
+  .hero-intro {
+      font-weight: 900;
+      font-size: 18px;
+  } 
+
+  .hero-header{
+    letter-spacing: 0.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-paragraph{
+    font-size: 18px;
+    letter-spacing: 0.05rem;
+  }
 
   button.shop-now{
     margin: auto;
