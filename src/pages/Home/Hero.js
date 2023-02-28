@@ -2,7 +2,7 @@ import React from 'react'
 import TypeWriter from '../../libs/TypeWriter'
 import Spring from '../../libs/Spring'
 // images
-import Shopping from "../../assets/images/Ecommerce checkout.gif"
+import Shopping from "../../assets/images/Ecommerce checkout.avif"
 
 
 const Hero = () => {

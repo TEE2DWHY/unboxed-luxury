@@ -24,7 +24,7 @@ const Home = () => {
 return (
    <>
         <Navbar/>
-        <div data-aos={animate}><Hero/></div>
+        <Hero/>
         <div data-aos={animate}><Brands/></div>
         <div data-aos={animate}><DressShoe/></div>
         <div data-aos={animate}><LatestArrivals/></div>
