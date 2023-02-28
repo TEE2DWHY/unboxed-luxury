@@ -9,7 +9,7 @@ const submit = (name, detail, price, quantity) => {
     const shoeQuantity =  quantityElement.innerHTML
     const totalCost = Number(shoePrice * shoeQuantity) 
     const phoneNumber = "+2349032533461";
-    if (totalCost === "0"){
+    if (totalCost === 0){
         alert("Please select a shoe quantity.")
     }
     else{
