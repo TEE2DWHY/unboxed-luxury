@@ -19,6 +19,11 @@ body {
 
 }
 
+.navbar-toggler{
+  border: none;
+  font-size: 14px;
+}
+
 .nav-link:hover{
     opacity: 0.6;
 }
