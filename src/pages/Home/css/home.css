@@ -52,8 +52,6 @@ button.shop-now{
     cursor: pointer;
     margin-top: 20px;
     margin-bottom: 20px;
-    animation: fadeIn;
-    animation-duration: 3s; /* don't forget to set a duration! */
 }
 
 button.shop-now:hover{
@@ -281,6 +279,8 @@ button.shop-now:hover{
 
 .features{
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .feature-icon{
@@ -316,7 +316,7 @@ button.shop-now:hover{
 }
 
 .discount-paragraph{
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 .discount-container{

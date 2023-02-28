@@ -4,8 +4,7 @@ import "aos/dist/aos.css"
 
 const Slider = () =>{
     Aos.init({
-    duration: 2000,
-    delay: 500
+    duration: 1000,
 })
 }
 

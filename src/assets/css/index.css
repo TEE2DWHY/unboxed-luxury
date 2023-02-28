@@ -11,9 +11,12 @@ body {
 
 .nav-home{
   font-weight: 600;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-decoration-color: #49101F;
+}
+
+.nav-home:hover{
+  text-decoration: dotted;
+  transition-duration: 2s;
+
 }
 
 .nav-link:hover{

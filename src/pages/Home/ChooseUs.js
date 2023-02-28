@@ -18,10 +18,10 @@ const ChooseUs = () => {
                     </p>
                 </div>
             </div>
-            <div className='features d-flex justify-content-between'>
-                    <div> <i class="fa-solid fa-money-bill feature-icon"></i> Affordable and Pocket Friendly </div>
-                    <div> <i class="fa-solid fa-truck feature-icon"></i> Fast Delivery</div>
-                    <div> <i class="fa-solid fa-phone feature-icon"></i> Fast Customer Support</div>
+            <div className='features'>
+                    <div className='my-3'> <i class="fa-solid fa-money-bill feature-icon"></i> Affordable and Pocket Friendly </div>
+                    <div className='my-3'> <i class="fa-solid fa-truck feature-icon"></i> Fast Delivery</div>
+                    <div className='my-3'> <i class="fa-solid fa-phone feature-icon"></i> Fast Customer Support</div>
             </div>
         </div>
    </>

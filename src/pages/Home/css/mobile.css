@@ -43,6 +43,15 @@
   .alexander-png{
     margin-top: 5%;
   }
+
+  .discount{
+    text-align: center;
+  }
+
+  .features{
+    flex-direction: column;
+  }
+
   .why-us{
     text-align: center;
   }
