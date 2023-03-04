@@ -301,7 +301,8 @@ button.shop-now:hover{
     flex: 1;
 }
 .brand-details p{
-    padding-right: 50px;
+   width: 100%;
+   /* font-size: 14px; */
 }
 
 /* Sneakers Collection */

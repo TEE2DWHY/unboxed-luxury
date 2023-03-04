@@ -7,7 +7,6 @@ const Footer = () => {
                   <div className='brand-details'>
                       <h3>Logo</h3>
                       <p>Unboxed Luxury is a footwear brand that sells branded shoes that have being opened from their box.
-                          Unboxed Luxury provides quality shoes at pocket friendly rate.
                       </p>
                   </div>
                   <div className='about'>

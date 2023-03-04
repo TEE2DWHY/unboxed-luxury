@@ -55,4 +55,14 @@
   .why-us{
     text-align: center;
   }
+
+  .footer{
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+  }
+  .brand-details{
+    text-align: center;
+    width: 100%;
+  }
 }

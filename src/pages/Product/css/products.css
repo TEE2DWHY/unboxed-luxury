@@ -1,0 +1,15 @@
+.img-section{
+    background-color: #E6E6E6
+}
+.header-purchase{
+    color: #49101F;
+    font-style: italic;
+    padding-top: 30px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
