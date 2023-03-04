@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import TypeWriter from '../../libs/TypeWriter'
 import Spring from '../../libs/Spring'
 // images
@@ -19,7 +19,7 @@ const Hero = () => {
                     </p>
                     <h1 className='hero-header'>Step into style with latest <span className='unboxed'>unboxed footwear</span> trends.</h1>
                     <p className='hero-paragraph'>Discover the perfect pair <i class="fa-solid fa-shoe-prints"></i> for every occasion from unboxed luxury , we always want you to step out in comfort and style. </p>
-                    <a href='/products'><button className='shop-now'> <i style={{marginRight:"10px", Color:"#49101F"}} class="fa-solid fa-arrow-right"></i> Shop Now</button></a>
+                    <Link to='/products'><button className='shop-now'> <i style={{marginRight:"10px", Color:"#49101F"}} class="fa-solid fa-arrow-right"></i> Shop Now</button></Link>
                     {/* Statistics */}
                          <span className='statistics'>
                          <span> <Spring n={100}/>

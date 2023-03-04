@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
                     <a class="nav-link active nav-home" aria-current="page" href="/#">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/products">Product</a>
+                    <Link class="nav-link" to="/products">Product</Link>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="/#">Contact Us</a>

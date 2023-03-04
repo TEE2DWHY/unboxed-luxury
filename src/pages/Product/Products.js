@@ -9,8 +9,22 @@ import Nike from "./images/Nike.png"
 import Gucci from "./images/Gucci.png"
 import DandG from "./images/D&G.png"
 import Balenciaga from "./images/Balenciga.png"
-
+// utils
+import shoeFilter from "../../utils/filter"
 const Products = () => {
+
+    // const berluttiText = document.getElementById("berlutti-text");
+    // berluttiText.addEventListener("click", () =>{
+    //     const shoeName = document.querySelectorAll("h3.shoe-title");
+    //     shoeName.forEach(name =>{
+    //         if (name.textContent.toLowerCase() === "berlutti"){
+    //                 name.parentElement.style.display = "block"
+    //         }
+    //         else{
+    //             name.parentElement.style.display = "none"  
+    //         }
+    //     })
+    // })
    
   return (
    <>
@@ -29,9 +43,15 @@ const Products = () => {
           <i class="fa-solid fa-filter" style={{marginRight:"20px"}}></i> 
           <span className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filter</span>
           <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/#">Berlutti</a></li>
-                <li><a class="dropdown-item" href="/#">Nike</a></li>
-                <li><a class="dropdown-item" href="/#">Gucci</a></li>
+                <li><span class="dropdown-item"
+                onClick={()=>shoeFilter("h3.shoe-title","berlutti")}
+                >Berlutti</span></li>
+                <li><span class="dropdown-item" 
+                onClick={()=>shoeFilter("h3.shoe-title","nike")}
+                >Nike</span></li>
+                <li><span class="dropdown-item"
+                onClick={()=>shoeFilter("h3.shoe-title","gucci")}
+                >Gucci</span></li>
          </ul>
           </div>
           <div className="left">
