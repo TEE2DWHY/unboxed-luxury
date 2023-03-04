@@ -4,6 +4,18 @@ body {
   overflow-x: hidden;
 }
 
+a{
+  text-decoration: none;
+}
+
+#berlutti, #DandG, #DandG1, #TomFord, #nike1, #nike, #alexander-mcqueen, #gucci,#Balenciaga, #Nike2{
+  background-color:#564739;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 8px;
+}
+
+/* Navbar */
 .navbar{
   background-color: #E4DDD6;
   padding: 20px;
@@ -40,7 +52,34 @@ body {
   cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Shoe Container Component */
+.shoe-container{
+  border-radius: 5px;
+  background-color: #EEEEEE;
+  padding: 20px;
+}
+
+.shoe-img{
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.shoe-details{
+  color: #555555;
+}
+
+.shoe-title{
+  color: #564739;
+  margin-top: 4%;
+  font-weight: bold;
+  width: 90%;
+}
+
+.shoe-prices{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px 0 0;
+  margin-bottom: 20px;
 }
