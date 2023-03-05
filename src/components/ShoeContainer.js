@@ -1,4 +1,3 @@
-import React from 'react'
 import increment, { decrement } from '../utils/quantity'
 
 const ShoeContainer = (props) => {

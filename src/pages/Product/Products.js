@@ -43,15 +43,18 @@ const Products = () => {
           <i class="fa-solid fa-filter" style={{marginRight:"20px"}}></i> 
           <span className="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filter</span>
           <ul class="dropdown-menu">
-                <li><span class="dropdown-item"
+                <li><span className="dropdown-item"
                 onClick={()=>shoeFilter("h3.shoe-title","berlutti")}
                 >Berlutti</span></li>
-                <li><span class="dropdown-item" 
+                <li><span className="dropdown-item" 
                 onClick={()=>shoeFilter("h3.shoe-title","nike")}
                 >Nike</span></li>
-                <li><span class="dropdown-item"
+                <li><span className="dropdown-item"
                 onClick={()=>shoeFilter("h3.shoe-title","gucci")}
                 >Gucci</span></li>
+                   <li><span className="dropdown-item default"
+                onClick={()=>window.location.reload()}
+                >Default</span></li>
          </ul>
           </div>
           <div className="left">

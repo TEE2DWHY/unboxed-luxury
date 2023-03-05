@@ -1,7 +1,7 @@
 function shoeFilter(title, type){
     const shoeName = document.querySelectorAll(title);
     shoeName.forEach(name =>{
-        if (name.textContent.toLowerCase() === type){
+        if (name.innerHTML.toLowerCase() === type){
                 name.parentElement.style.display = "block"
         }
         else{
