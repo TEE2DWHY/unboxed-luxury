@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import Products from "../../components/Products";
 // images
@@ -18,6 +19,7 @@ const Gucci = () => {
          size3="43"
          size4="45"
         />
+        <Footer/>
    </>
   )
 }

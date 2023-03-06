@@ -72,9 +72,11 @@ const Products = (props) => {
                 )
             }}>Reviews</span>
             </div>
+            <hr/>
             {orderDetails}
+            <hr/>
         </div>
-        <h4 className="bold">Related Product</h4>
+        <h4 className="bold">Related Products</h4>
     </div>
     </>
   )

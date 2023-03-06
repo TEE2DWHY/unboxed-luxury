@@ -137,7 +137,7 @@ a{
   border-radius: 7px;
   border: 2px dotted #49101F;
   background-color: #EDE7E9;
-  padding: 5px;
+  padding: 10px;
   font-size: 14px;
   color: #49101F;
   letter-spacing: 0.02rem;
@@ -159,7 +159,7 @@ a{
 .detail-container{
   padding: 5px 10px;
   color: #555555;
-  margin-top: 3%;
+  margin-top: 1%;
 }
 .img-product{
   width: 250px;
