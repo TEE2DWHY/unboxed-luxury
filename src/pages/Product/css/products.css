@@ -16,13 +16,16 @@
 .shoe-section{
     padding-top: 5%;
 }
-
-#gucci{
-    background-color:#564739;
-    color: #fff;
-    border-radius: 50%;
-    padding: 2px 8px;
+/* .row{
+    display: flex;
 }
+
+.col-lg-4{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+} */
 .products-sale{
     font-family: 'Times New Roman', Times, serif;
     color: #49101F;

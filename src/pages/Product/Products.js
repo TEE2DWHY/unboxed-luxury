@@ -12,19 +12,6 @@ import Balenciaga from "./images/Balenciga.png"
 // utils
 import shoeFilter from "../../utils/filter"
 const Products = () => {
-
-    // const berluttiText = document.getElementById("berlutti-text");
-    // berluttiText.addEventListener("click", () =>{
-    //     const shoeName = document.querySelectorAll("h3.shoe-title");
-    //     shoeName.forEach(name =>{
-    //         if (name.textContent.toLowerCase() === "berlutti"){
-    //                 name.parentElement.style.display = "block"
-    //         }
-    //         else{
-    //             name.parentElement.style.display = "none"  
-    //         }
-    //     })
-    // })
    
   return (
    <>
