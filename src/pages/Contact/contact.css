@@ -1,0 +1,73 @@
+.contact-hero{
+    background-image: url("./images/contact-hero.png");
+    height: 500px;
+}
+
+.hero-text{
+    padding: 10% 0;
+    text-align: center;
+    z-index: 5;
+    background-color: #fff;
+    opacity: 0.8;
+    width: 50%;
+    height: 90%;
+}
+
+.get-in-touch{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+}
+
+.contact-header{
+    font-weight: 900;
+    color: #5F4F3F;
+    font-size: 80px;
+}
+
+.quick-assist{
+    color: #7E6E5C;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 5%;
+}
+/* Accordion */
+.accordion{
+    margin-top: 5%;
+}
+.accordion-button:not(.collapsed){
+    background-color:#E4DDD6;
+    color: #000;
+}
+.accordion-button{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+/* Contact */
+.contact{
+    text-align: center;
+    background-color:#A8927A;
+    padding: 30px;
+}
+.contact-extra{
+    color: #fff;
+    padding-top: 10px;
+}
+.contact-headers{
+    margin-top: 20px;
+}
+
+@media(max-width: 1200px){
+    .contact-hero{
+        background-image: none;
+        display: none;
+    }
+    .contact-header{
+        font-weight: 900;
+        color: #5F4F3F;
+        font-size: 35px;
+        line-height: 1.3;
+    }
+}

@@ -9,7 +9,7 @@ const Discount = () => {
                 <div className='row discount-container'>
                     <div className='col-lg-6'>
                         <h3>Discount Discount Discount!!!</h3>
-                        <h4>25%</h4>
+                        <h4 className='twenty-five-percent'>25%</h4>
                         <h3 className='discount-paragraph'>Unboxed Luxury would be offering its first 100 online customers a 25% discount</h3>
                     </div>
                     <div className='col-lg-6 discount-2'>

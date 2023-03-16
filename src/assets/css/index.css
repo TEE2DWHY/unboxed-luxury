@@ -68,6 +68,7 @@ a{
   width: 200px;
   display: block;
   margin: auto;
+  object-fit: cover;
 }
 
 .shoe-details{
