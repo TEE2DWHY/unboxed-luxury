@@ -40,6 +40,25 @@ const Contact = () => {
           </div>
           </div>
       </div>
+      <div className="container">
+            <h1 className="contact-details-header">Contact Details</h1>
+            <div className="row">
+              <div className="col-lg-4 contact-sub">
+                  <h4>Office Hours</h4>
+                  <p><i class="fa-solid fa-calendar-days"></i> Monday - Saturday</p>
+                  <p>8:00 a.m - 10:00 a.m</p>
+              </div>
+              <div className="col-lg-4 contact-sub">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-envelope"></i> temitopesoremekun2@gmail.com</p>
+                    <p>+2349029717250</p>
+                </div>
+                <div className="col-lg-4 contact-sub">
+                    <h4>Location</h4>
+                    <p> <i class="fa-solid fa-location-dot"></i>Apakila, camp, abeokuta ogun state , Nigeria</p>
+                </div>
+            </div>
+          </div>
       <Footer/>
   </>
   )
