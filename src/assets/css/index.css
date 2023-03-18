@@ -169,3 +169,35 @@ a{
   margin: auto;
   margin-top: 15%;
 }
+
+/* Footer */
+.brand-details{
+  flex: 1;
+}
+.footer-p{
+  font-weight: bold;
+  padding-right: 50px;
+}
+.footer-content{
+  display: flex;
+  flex:2;
+  margin-top: 5%;
+}
+.about{
+  font-weight: bold;
+  flex-direction: column;
+  text-align: left;
+}
+.product{
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+/* Media */
+@media(max-width:1200px){
+  .footer-p{
+    text-align: left;
+    padding: 0;
+  }
+}

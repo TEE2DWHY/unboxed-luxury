@@ -3,19 +3,18 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  a{
+  .collection-shoe{
+   width: 280px;
+   height: 280px;
+}
+
+  /* a{
     color: #fff;
-  }
+  } */
 
   .hero-section{
         text-align: center;
   }
-
-  .collection-shoe{
-      width: 100%;
-      height: 300px;
-  }
-
     
   .hero-intro {
       font-weight: 900;
