@@ -177,6 +177,7 @@ a{
 .footer-p{
   font-weight: bold;
   padding-right: 50px;
+  letter-spacing: 0.05em;
 }
 .footer-content{
   display: flex;
