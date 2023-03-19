@@ -3,17 +3,20 @@ import logo from "../assets/images/logo.png"
 const Footer = () => {
   return (
         <>
+        <hr/>
             <div className='container footer d-flex justify-content-between'>
                   <div className='brand-details container'>
                       <img className='img-fluid' src={logo} alt="logo"/>
                       <br/> <br/>
                       <p className='footer-p'>Unboxed Luxury is a footwear brand that sells branded shoes that have being opened from their box. Unboxed luxury is a footwear brand that sells branded shoes that have being opened from their box.
                       </p>
-                      <i class="fa-brands fa-square-whatsapp fa-2x" style={{padding:"20px"}}></i>
-                      <i class="fa-brands fa-twitter fa-2x" style={{padding:"20px"}}></i>
-                      <i class="fa-brands fa-square-instagram fa-2x" style={{padding:"20px"}}></i>
-                      <i class="fa-brands fa-tiktok fa-2x" style={{padding:"20px"}}></i>
+                      <div className='footer-icons'>
+                        <i class="fa-brands fa-square-whatsapp fa-2x" style={{padding:"20px"}}></i>
+                        <i class="fa-brands fa-twitter fa-2x" style={{padding:"20px"}}></i>
+                        <i class="fa-brands fa-square-instagram fa-2x" style={{padding:"20px"}}></i>
+                        <i class="fa-brands fa-tiktok fa-2x" style={{padding:"20px"}}></i>
                       {/* <i class="fa-brands fa-facebook fa-2x"></i> */}
+                      </div>
                   </div>
                   <div className='footer-content container'>
                     <div className='about'>

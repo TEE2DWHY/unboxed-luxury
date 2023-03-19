@@ -171,8 +171,14 @@ a{
 }
 
 /* Footer */
+.footer{
+  margin-top: 10%;
+}
 .brand-details{
   flex: 1;
+}
+.footer-icons{
+  margin-bottom: 10%;
 }
 .footer-p{
   font-weight: bold;

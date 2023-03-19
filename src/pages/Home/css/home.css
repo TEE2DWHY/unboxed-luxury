@@ -130,7 +130,13 @@ button.shop-now:hover{
     padding: 20px;
     border-radius: 10px;
     /* border-color: #efcca7; */
-    border: 1px solid #efcca7;
+    border: 1px dotted #efcca7;
+}
+.collection-container:hover{
+    animation: pulse;
+    animation-duration: 2s;
+    background-color: #E4DDD6;
+    color: #211C16;
 }
 #berlutti, #DandG, #DandG1, #TomFord, #nike1, #nike, #alexander-mcqueen, #DandG{
     background-color:#564739;
@@ -173,7 +179,7 @@ button.shop-now:hover{
     color: #49101F;
     border: none;
     border-radius: 7px;
-    padding: 5px 20px;
+    padding: 10px 20px;
 }
 .arrivals{
     background-color: #A8927A;
